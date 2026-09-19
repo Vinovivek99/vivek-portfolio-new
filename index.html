@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vivekkumar Natarajan - Azure Cloud Engineer portfolio">
+  <title>Vivekkumar Natarajan | Azure Cloud Engineer</title>
+  <style>
+    :root{--red:#e50914;--red2:#ff3340;--white:#fff;--muted:#b7b7bd;--bg:#0b0b0d;--card:#141418;--line:#29292f;--max:1180px}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--white);line-height:1.6}
+    a{color:inherit;text-decoration:none}.container{width:min(92%,var(--max));margin:auto}
+    nav{position:fixed;top:0;left:0;width:100%;z-index:100;background:rgba(11,11,13,.86);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.07)}
+    .nav-inner{height:76px;display:flex;align-items:center;justify-content:space-between}.logo{font-size:25px;font-weight:900;letter-spacing:-1.5px}.logo span{color:var(--red)}
+    .links{display:flex;gap:28px;font-size:14px;font-weight:700}.links a{color:#ddd;transition:.25s}.links a:hover{color:var(--red)}
+    .menu{display:none;border:0;background:none;color:#fff;font-size:27px}
+    section{padding:105px 0}.hero{min-height:100vh;padding-top:130px;display:flex;align-items:center;overflow:hidden;position:relative}.hero:before{content:"";position:absolute;width:520px;height:520px;background:var(--red);filter:blur(150px);opacity:.12;right:-180px;top:160px}
+    .hero-grid{display:grid;grid-template-columns:1fr 430px;gap:70px;align-items:center}.eyebrow{color:var(--red2);font-weight:800;letter-spacing:3px;text-transform:uppercase;font-size:13px;margin-bottom:15px}.hero h1{font-size:clamp(46px,7vw,82px);line-height:.98;letter-spacing:-4px;max-width:800px}.hero h1 span{color:var(--red)}.hero p{color:var(--muted);max-width:650px;font-size:18px;margin:26px 0 30px}
+    .buttons{display:flex;gap:14px;flex-wrap:wrap}.btn{padding:13px 22px;border:1px solid var(--red);font-weight:800;border-radius:4px;transition:.25s}.btn.primary{background:var(--red)}.btn:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(229,9,20,.22)}.btn.secondary{border-color:#45454d}
+    .photo-wrap{position:relative}.photo-wrap:before{content:"";position:absolute;inset:22px -18px -18px 18px;border:2px solid var(--red);z-index:0}.photo{position:relative;z-index:1;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center top;display:block;filter:saturate(.95);background:#222}
+    .hero-social{position:absolute;left:24px;bottom:42px;display:flex;flex-direction:column;align-items:center;gap:12px;color:#aaa;font-size:13px;z-index:5}.hero-social a{writing-mode:vertical-rl;transform:rotate(180deg);letter-spacing:.3px}.hero-social a:hover{color:var(--red)}.hero-social span{font-size:18px;color:#666}
+    .section-title{margin-bottom:45px}.section-title small{color:var(--red);font-weight:900;letter-spacing:3px}.section-title h2{font-size:42px;letter-spacing:-1.5px;margin-top:7px}.section-title p{color:var(--muted);max-width:650px;margin-top:8px}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px}.about-text p{color:#c7c7cc;margin-bottom:17px}.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}.stat{background:var(--card);border:1px solid var(--line);padding:25px}.stat b{display:block;font-size:31px;color:var(--red)}.stat span{color:#aaa;font-size:14px}
+    .skills{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.skill{padding:23px;background:var(--card);border:1px solid var(--line);position:relative;overflow:hidden}.skill:after{content:"";position:absolute;width:70px;height:70px;background:var(--red);filter:blur(45px);opacity:.12;right:-20px;top:-20px}.skill h3{font-size:16px;margin-bottom:8px}.skill p{color:#aaa;font-size:14px}
+    .timeline{border-left:2px solid #303037;margin-left:8px;padding-left:32px}.item{position:relative;margin-bottom:38px}.item:before{content:"";position:absolute;width:11px;height:11px;border-radius:50%;background:var(--red);left:-39px;top:8px;box-shadow:0 0 0 5px var(--bg),0 0 20px rgba(229,9,20,.45)}.item .date{color:var(--red2);font-size:13px;font-weight:800}.item h3{font-size:22px;margin:4px 0}.item h4{color:#aaa;font-weight:600;margin-bottom:8px}.item li{color:#bcbcc2;margin:5px 0;margin-left:18px}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:var(--card);border:1px solid var(--line);padding:28px;min-height:190px;transition:.25s}.card:hover{border-color:var(--red);transform:translateY(-5px)}.card .num{color:var(--red);font-size:13px;font-weight:900}.card h3{margin:10px 0}.card p{color:#aaa;font-size:14px}
+    .edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.edu{background:var(--card);border:1px solid var(--line);padding:25px}.edu span{color:var(--red);font-size:13px;font-weight:800}.edu h3{margin:5px 0}.edu p{color:#aaa}
+    .contact{background:#111114}.contact-box{display:grid;grid-template-columns:1fr 1fr;gap:40px}.contact-info a{display:block;color:#ccc;margin:13px 0}.contact-info a:hover{color:var(--red)}.contact-cta{border:1px solid var(--line);padding:32px;background:var(--card)}.contact-cta h3{font-size:28px}.contact-cta p{color:#aaa;margin:10px 0 22px}
+    footer{border-top:1px solid var(--line);padding:25px 0;color:#777;font-size:13px;text-align:center}
+    .reveal{opacity:0;transform:translateY(20px);transition:.7s}.reveal.show{opacity:1;transform:none}
+    @media(max-width:900px){.hero-grid,.about-grid,.contact-box{grid-template-columns:1fr}.hero{padding-top:120px}.hero-grid{gap:45px}.photo-wrap{width:min(78%,430px);margin:auto}.hero-social{display:none}.skills{grid-template-columns:repeat(2,1fr)}.cards{grid-template-columns:1fr}.edu-grid{grid-template-columns:1fr}.links{display:none}.menu{display:block}}
+    @media(max-width:550px){section{padding:80px 0}.nav-inner{height:68px}.hero h1{font-size:48px;letter-spacing:-2px}.hero p{font-size:16px}.skills{grid-template-columns:1fr}.stats{grid-template-columns:1fr}.photo-wrap{width:90%}}
+  </style>
+</head>
+<body>
+  <nav><div class="container nav-inner"><a class="logo" href="#home">Vivek<span>.</span></a><div class="links"><a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#contact">Contact</a></div><button class="menu" aria-label="Menu">☰</button></div></nav>
+
+  <main>
+    <section class="hero" id="home"><div class="hero-social"><a href="https://www.linkedin.com/in/vivek-kumar-natarajan" target="_blank" rel="noopener">LinkedIn</a><span>│</span></div><div class="container hero-grid">
+      <div class="reveal"><div class="eyebrow">Azure Cloud Engineer</div><h1>I build <span>secure</span> & scalable cloud solutions.</h1><p>Cloud Engineer specializing in Microsoft Azure, cloud infrastructure management, deployment, monitoring, troubleshooting and optimization.</p><div class="buttons"><a class="btn primary" href="#contact">Get In Touch</a><a class="btn secondary" href="resume.pdf" download>Download Resume</a></div></div>
+      <div class="photo-wrap reveal"><img class="photo" src="profile.jpg" alt="Vivekkumar Natarajan"></div>
+    </div></section>
+
+    <section id="about"><div class="container"><div class="section-title reveal"><small>01 — ABOUT</small><h2>Cloud. Infrastructure. Reliability.</h2></div><div class="about-grid"><div class="about-text reveal"><p>As a passionate Cloud Engineer specializing in Azure, I bring experience in cloud architecture, deployment and management with a focus on efficiency, scalability and security.</p><p>Currently working as a Cloud Engineer, supporting enterprise Azure environments, handling infrastructure operations, incidents, monitoring, cost optimization and network connectivity.</p></div><div class="stats reveal"><div class="stat"><b>3+</b><span>Years of cloud engineering experience</span></div><div class="stat"><b>24/7</b><span>Azure cloud customer support</span></div><div class="stat"><b>AZ-104</b><span>Microsoft Azure Administrator Associate</span></div><div class="stat"><b>3</b><span>VPN types configured</span></div></div></div></div></section>
+
+    <section id="skills"><div class="container"><div class="section-title reveal"><small>02 — SKILLS</small><h2>Technical toolkit.</h2></div><div class="skills">
+      <div class="skill reveal"><h3>Azure</h3><p>Azure Entra ID, Virtual Machines, App Services, Load Balancers and IAM.</p></div>
+      <div class="skill reveal"><h3>Monitoring</h3><p>Azure Monitor, Log Analytics, CloudWatch and Site24/7.</p></div>
+      <div class="skill reveal"><h3>Infrastructure</h3><p>VM deployment, storage, networking, databases and resource groups.</p></div>
+      <div class="skill reveal"><h3>Networking</h3><p>Site-to-Site, Point-to-Site and VNet-to-VNet VPN configuration.</p></div>
+      <div class="skill reveal"><h3>Operations</h3><p>Incident response, root-cause analysis, patching and troubleshooting.</p></div>
+      <div class="skill reveal"><h3>Cost Optimization</h3><p>Subscription budgets, cost estimation, alerts and optimization strategies.</p></div>
+      <div class="skill reveal"><h3>Operating Systems</h3><p>Windows Server and Linux Server administration.</p></div>
+      <div class="skill reveal"><h3>Security</h3><p>Access management, security best practices and compliance-focused operations.</p></div>
+    </div></div></section>
+
+    <section id="experience"><div class="container"><div class="section-title reveal"><small>03 — EXPERIENCE</small><h2>Professional journey.</h2></div><div class="timeline"><div class="item reveal"><div class="date">AUG 2023 — PRESENT</div><h3>Cloud Engineer</h3><h4>Xencia Technology Solutions Pvt Ltd · Bengaluru, Karnataka</h4><ul><li>Manage and support cloud infrastructure on Microsoft Azure.</li><li>Handle VM deployment, storage configuration, network setup and cost optimization.</li><li>Monitor, maintain and optimize Azure resources including VMs, storage, networking and databases.</li><li>Manage Azure subscriptions, resource groups and cost optimization strategies.</li><li>Respond to and resolve Azure incidents and outages; analyze root causes and implement long-term fixes.</li><li>Configure subscription budgets, alerts and cost estimation.</li><li>Prepare and analyze migration checklists for Azure resource migration.</li><li>Configure Site-to-Site, Point-to-Site and VNet-to-VNet VPNs.</li><li>Deploy and resize VMs, add disks and mount them inside servers.</li><li>Perform daily, weekly and monthly patch updates for customer systems.</li><li>Set up Site24/7 alerts and dashboards for proactive monitoring.</li></ul></div></div></div></section>
+
+    <section id="projects"><div class="container"><div class="section-title reveal"><small>04 — PROJECTS</small><h2>What I work with.</h2><p>Project areas represented from the experience and responsibilities in my resume.</p></div><div class="cards">
+      <div class="card reveal"><div class="num">01 / AZURE</div><h3>Cloud Infrastructure Management</h3><p>VMs, storage, networking, databases, subscriptions and resource groups with a focus on availability and performance.</p></div>
+      <div class="card reveal"><div class="num">02 / NETWORKING</div><h3>Azure VPN Connectivity</h3><p>Configured Site-to-Site, Point-to-Site and VNet-to-VNet VPN connectivity for cloud environments.</p></div>
+      <div class="card reveal"><div class="num">03 / MONITORING</div><h3>Proactive Cloud Monitoring</h3><p>Customer monitoring with Site24/7 alerts and dashboards, supported by Azure monitoring and cost alerts.</p></div>
+    </div></div></section>
+
+    <section id="education"><div class="container"><div class="section-title reveal"><small>05 — EDUCATION & CERTIFICATIONS</small><h2>Learning foundation.</h2></div><div class="edu-grid">
+      <div class="edu reveal"><span>AUG 2019 — MAY 2021</span><h3>MBA — Human Resources Management</h3><p>Bharathidasan University · Trichy, Tamil Nadu</p></div>
+      <div class="edu reveal"><span>AUG 2016 — MAY 2019</span><h3>Bachelor of Computer Applications</h3><p>Srinivasan College of Arts & Science · Perambalur, Tamil Nadu</p></div>
+      <div class="edu reveal"><span>CERTIFICATION</span><h3>Microsoft Azure Administrator Associate</h3><p>AZ-104</p></div>
+      <div class="edu reveal"><span>CERTIFICATION</span><h3>Diploma in Computer Applications</h3><p>Professional certification</p></div>
+    </div></div></section>
+
+    <section class="contact" id="contact"><div class="container"><div class="section-title reveal"><small>06 — CONTACT</small><h2>Let's connect.</h2></div><div class="contact-box"><div class="contact-info reveal"><a href="mailto:vinovivek99@gmail.com">✉ vinovivek99@gmail.com</a><a href="tel:+919655393139">☎ +91 9655393139</a><a href="https://www.linkedin.com/in/vivek-kumar-natarajan" target="_blank">in LinkedIn Profile</a></div><div class="contact-cta reveal"><h3>Looking for a Cloud Engineer?</h3><p>Let's discuss Azure infrastructure, cloud operations and reliable solutions.</p><a class="btn primary" href="mailto:vinovivek99@gmail.com?subject=Cloud%20Engineer%20Opportunity">Contact Me</a></div></div></div></section>
+  </main>
+  <footer><div class="container">© 2026 Vivekkumar Natarajan · Azure Cloud Engineer</div></footer>
+  <script>const els=document.querySelectorAll('.reveal');const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});els.forEach(e=>io.observe(e));</script>
+</body>
+</html>
